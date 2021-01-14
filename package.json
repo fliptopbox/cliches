@@ -1,0 +1,31 @@
+{
+  "name": "cliches",
+  "version": "1.0.0",
+  "description": "Identify and list commonly used clichés used within a body of text",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fliptopbox/cliches.git"
+  },
+  "keywords": [
+    "cliche",
+    "write",
+    "english",
+    "language",
+    "poetry",
+    "prose",
+    "writting"
+  ],
+  "author": "Bruce Thomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fliptopbox/cliches/issues"
+  },
+  "homepage": "https://github.com/fliptopbox/cliches#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
