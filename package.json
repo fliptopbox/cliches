@@ -2,7 +2,7 @@
   "name": "cliches",
   "version": "1.0.0",
   "description": "Identify and list commonly used clichés used within a body of text",
-  "main": "index.js",
+  "main": "cliches.js",
   "scripts": {
     "test": "jest"
   },

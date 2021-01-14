@@ -33,12 +33,13 @@ describe('cliche catcher', () => {
 
     test('detects multilple cliches in multiline corpus', () => {
         const corpus = `
-          she was ugly,
-          as "ugly as sin itself" on yeah,
-          and old, as old as time too, so
-          she did have an axe to grind and
-          yet he was totally under her thumb`;
+            she was ugly,
+            as "ugly as sin itself" on yeah,
+            and old, as old as time, so
+            she did have an axe to grind ...
+            and yet he was totally under her thumb`;
 
+        console.log(cliches.test(corpus));
         expect(cliches.test(corpus)).toHaveLength(4);
     });
 });
