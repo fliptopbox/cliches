@@ -1,4 +1,5 @@
-const cliches = require(`./cliches.js`);
+// const cliches = require(`./cliches.js`);
+import * as cliches from "./cliches.js";
 
 describe('cliche catcher', () => {
     test('given nothing returns "null"', () => {

@@ -1,4 +1,4 @@
-
+module.exports = `
 #
 #
 #    Appending to the glossary of clichés
@@ -721,3 +721,5 @@ you only live once
 young and foolish
 young and vibrant
 youre the boss
+
+# do not delete this line`;
