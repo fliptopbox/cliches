@@ -56,7 +56,7 @@ bat out of hell
 be all and end all
 beat a dead horse
 beat around the bush
-bee in her bonnet
+bee in (his|her) bonnet
 been there, done that
 beg to differ
 beggars cant be choosers
@@ -168,7 +168,7 @@ creature comforts
 cross that bridge when we come to it
 cross that bridge when you come to it
 crow flies
-cry her eyes out
+cry (his|her) eyes out
 cry like a baby
 cry me a river
 crying over spilled milk
@@ -227,7 +227,7 @@ every fiber of my being
 everything but the kitchen sink
 eye for an eye
 eye to eye
-eyes in the back of her head
+eyes in the back of (his|her) head
 facts of life
 fair weather friend
 fall by the wayside
@@ -281,7 +281,6 @@ go him one better
 go the extra mile
 go with the flow
 goes around comes around
-goes without saying
 goes without saying
 good as gold
 good deed for the day
