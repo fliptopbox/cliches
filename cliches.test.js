@@ -22,13 +22,13 @@ describe('cliche catcher', () => {
         const expected = ['all (\\w+) eggs in one basket'];
 
         // dynamic word group match (\w+)
-        expect(cliches.test(`and they kept all the eggs in one basket`)) //
+        expect(cliches.test("and they kept all the eggs in one basket")) //
             .toEqual(expected);
 
-        expect(cliches.test(`they kept all their eggs in one basket`)) //
+        expect(cliches.test("they kept all their eggs in one basket")) //
             .toEqual(expected);
 
-        expect(cliches.test(`he kept all his eggs in one basket`)) //
+        expect(cliches.test("he kept all his eggs in one basket")) //
             .toEqual(expected);
     });
 

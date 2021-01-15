@@ -14,7 +14,7 @@ module.exports = `
 #    -------------------------------------
 #    - replace gender specific nouns with (his|her)
 #    - replace posession with (your|my)
-#    - catch a broad subject or word with (\w+)
+#    - catch a broad subject or word with (\\w+)
 #
 #
 
@@ -28,7 +28,7 @@ all in a days work
 all intents and purposes
 all talk, no action
 all thumbs
-all (\w+) eggs in one basket
+all (\\w+) eggs in one basket
 alls fair in love and war
 alls well that ends well
 almighty dollar

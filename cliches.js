@@ -1,6 +1,4 @@
-const fs = require('fs');
-const filename = 'glossary.txt';
-const data = fs.readFileSync(filename, 'utf8');
+const data = require("./glossary.js");
 const knownPhrases = data
     .trim()
     .split(/\n/)
@@ -62,7 +60,10 @@ function getKeyWords(wordArray) {
 function containsPhrase(phrases, sentence) {
     // does the phase exist in the sentence?
     const text = phrases.join(' ');
-    return new RegExp(`${text}`, 'i').test(sentence);
+    const rex = new RegExp(`${text}`, 'i');
+    const match = rex.test(sentence);
+
+    return match;
 }
 
 function matchedPhrases(keyword) {
