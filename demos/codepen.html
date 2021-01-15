@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliché catcher</title>
+
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: "Libre Baskerville", serif;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        div {
+            width: 80%;
+            margin: auto;
+        }
+        h1 {
+            font-style: italic;
+        }
+        .input {
+            display: block;
+            line-height: 1;
+            font-size: 64px;
+            width: 100%;
+            border-bottom: 3px solid black;
+            padding: 20px 10px;
+            letter-spacing: -0.04em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="input" contenteditable="true" placeholder="Type here ...">
+            ...
+        </span>
+        <h1>cliché catcher <i></i></h1>
+    </div>
+
+    <script type="module">
+        import * as cliches from "https://cdn.skypack.dev/cliches@1.0.3";
+
+        const input = document.querySelector(".input");
+        const count = document.querySelector("i");
+        let timer;
+
+        input.onclick = handleFocus;
+        input.onkeyup = handleKeyup;
+
+        seed();
+
+        function handleFocus(e) {
+            const { target } = e;
+            const placeholder = target.hasAttribute("placeholder");
+
+            if (!placeholder) return;
+
+            target.innerHTML = "";
+            target.removeAttribute("placeholder");
+            input.innerHTML = "";
+            checkInput("");
+            clearTimeout(timer);
+        }
+
+        function handleKeyup(e) {
+            const { which, target } = e;
+            const { innerText = "" } = target || {};
+            checkInput(innerText);
+        }
+
+        async function checkInput(string = null) {
+            const results = cliches.test(string);
+            const { length = "" } = results || {};
+            count.innerHTML = length ? `caught ${length}` : "";
+        }
+
+        function seed() {
+            const sentence = [
+                "ace up her sleeve",
+                "yet afraid of her own shadow",
+                "and looking as white as a sheet",
+                "but then again nothing is written in stone",
+                "you are what you eat right?",
+                "she will call a spade a spade alright",
+                "down on her luck or not"
+            ]
+                .sort(() => Math.random() - 0.5)
+                .filter(() => Math.random() > 0.6)
+                .join(" ");
+
+            input.innerHTML = `${sentence}`;
+            checkInput(sentence);
+
+            if (input.hasAttribute("placeholder")) {
+                timer = setTimeout(seed, 10000);
+            }
+        }
+
+    </script>
+</body>
+</html>

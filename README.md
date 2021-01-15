@@ -63,6 +63,7 @@ To add or edit this list please clone the repo and submit a pull-request.
 
 #### Example uses:
 
--   Twitter cliche re-tweeter
--   Eleventy Cliche Counter
--   Codepen Demo
+-   *Twitter cliché re-tweeter* - coming soon
+-   *Eleventy Cliché Counter plugin* - coming soon
+-   [Cliché catcher](https://codepen.io/fliptopbox/pen/VwKVEVZ) on Codepen
+-   [RunKit](https://runkit.com/fliptopbox/cliches) - Node with REST endpoint
