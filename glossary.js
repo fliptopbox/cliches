@@ -56,7 +56,7 @@ bat out of hell
 be all and end all
 beat a dead horse
 beat around the bush
-bee in (his|her) bonnet
+bee in her bonnet
 been there, done that
 beg to differ
 beggars cant be choosers
@@ -85,7 +85,7 @@ bird in the hand
 birds and the bees
 birds eye view
 birds of a feather flock together
-bit the hand that feeds you
+bite the hand that feeds
 bite the bullet
 bite the dust
 bitten off more than he can chew
@@ -166,13 +166,11 @@ crack of dawn
 crash course
 creature comforts
 cross that bridge when we come to it
-cross that bridge when you come to it
 crow flies
 cry (his|her) eyes out
 cry like a baby
 cry me a river
-crying over spilled milk
-crying over spilt milk
+crying over (\\w+) milk
 crystal clear
 curiosity killed the cat
 cut and dried
@@ -629,7 +627,6 @@ take the bait
 take the plunge
 takes all kinds
 takes one to know one
-takes one to know one
 taking candy from a baby
 talk turkey
 the end of the world
@@ -640,8 +637,7 @@ think outside of the box
 third times the charm
 this day and age
 three sheets to the wind
-three strikes against her
-three strikes against him
+three strikes against (him|her)
 throw in the towel
 tighter than a drum
 till the fat lady sings
@@ -650,7 +646,7 @@ time is of the essence
 time like the present
 tip of the iceberg
 toe the line
-tongue-in-cheek
+tongue.in.cheek
 too good to be true
 too hot to handle
 too numerous to mention
@@ -673,7 +669,7 @@ until the cows come home
 unvarnished truth
 up the creek
 up the wall
-up to (his|her) ears in trouble
+up to (his|her) ears in (\\w+)
 uphill battle
 upper crust
 upset the applecart

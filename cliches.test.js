@@ -1,5 +1,5 @@
 // const cliches = require(`./cliches.js`);
-import * as cliches from "./cliches.js";
+import * as cliches from './cliches.js';
 
 describe('cliche catcher', () => {
     test('given nothing returns "null"', () => {
@@ -22,13 +22,13 @@ describe('cliche catcher', () => {
         const expected = ['all (\\w+) eggs in one basket'];
 
         // dynamic word group match (\w+)
-        expect(cliches.test("and they kept all the eggs in one basket")) //
+        expect(cliches.test('and they kept all the eggs in one basket')) //
             .toEqual(expected);
 
-        expect(cliches.test("they kept all their eggs in one basket")) //
+        expect(cliches.test('they kept all their eggs in one basket')) //
             .toEqual(expected);
 
-        expect(cliches.test("he kept all his eggs in one basket")) //
+        expect(cliches.test('he kept all his eggs in one basket')) //
             .toEqual(expected);
     });
 
@@ -40,7 +40,43 @@ describe('cliche catcher', () => {
             she did have an axe to grind ...
             and yet he was totally under her thumb`;
 
-        console.log(cliches.test(corpus));
         expect(cliches.test(corpus)).toHaveLength(4);
     });
+
+    test('normalizes common word groups', () => {
+        const { normalizeText } = cliches;
+
+        expect(normalizeText('black & blue')).toBe(
+            'black (&|n|and) blue'
+        );
+
+        expect(normalizeText('guns n roses')).toBe(
+            'guns (&|n|and) roses'
+        );
+
+        expect(normalizeText('eat your heart out')).toBe(
+            'eat (your|my) heart out'
+        );
+
+        expect(normalizeText('you are what you eat')).toBe(
+            '(you|we) are what (you|we) eat'
+        );
+
+        expect(normalizeText('bee in his bonet')).toBe(
+            'bee in (his|her) bonet'
+        );
+    });
+
+    // test('normalize "his" to incl. his,her', () => {
+    //     const { test } = cliches;
+    //     const expected = ['bee in (his|her) bonnet'];
+    //     expect(test('bee in his bonnet')).toEqual(expected);
+    //     expect(test('bee in her bonnet')).toEqual(expected);
+    // });
+
+    // test('normalize "and" to incl. and,&,n', () => {
+    //     const { test } = cliches;
+    //     const expected = ['an arm (&|n|and) a leg'];
+    //     expect(test('an arm and a leg')).toEqual(expected);
+    // });
 });

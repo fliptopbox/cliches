@@ -1,18 +1,31 @@
-const data = require("./glossary.js");
-const knownPhrases = data
-    .trim()
-    .split(/\n/)
-    .map((r) => {
-        const row = r.trim();
-        const ignore = /(^#|^$)/.test(row);
-        return !ignore ? row : null;
-    })
-    .filter((r) => r);
+const data = require('./glossary.js');
+const knownPhrases = data.trim().split(/\n/).map(normalizeText).filter(blanks);
 
 const phrases = getPhraseCollection(knownPhrases);
 const keys = [...new Set(phrases.map(([k]) => k))];
 
-module.exports = { keys, phrases, test, clean: sanitizeText };
+module.exports = { keys, phrases, test, clean: sanitizeText, normalizeText };
+
+function blanks(s = null) {
+    return s ? true : false;
+}
+
+function normalizeText(string = '') {
+    // replace conjunctives, trim whitespace
+    // and augment common multiple word groups
+
+    let text = `${string}`.trim();
+    const ignore = /(^#|^$)/.test(text);
+    if (ignore) return null;
+
+    text = text.replace(/\s+/g, " ");
+    text = text.replace(/ (&|n|and) /i, ' (&|n|and) ');
+    text = text.replace(/ (his|her) /i, ' (his|her) ');
+    text = text.replace(/([\s^])?(your|my) /i, '$1(your|my) ');
+    text = text.replace(/([\s^])?(you|we) /gi, '$1(you|we) ');
+
+    return text;
+}
 
 function getPhraseCollection(array) {
     return array.map((s) => {
