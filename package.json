@@ -1,6 +1,6 @@
 {
     "name": "cliches",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Uses regular expressions to dynamically identify and list commonly used clichés in a body of text",
     "main": "cliches.js",
     "scripts": {
