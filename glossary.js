@@ -32,9 +32,8 @@ all (\\w+) eggs in one basket
 alls fair in love and war
 alls well that ends well
 almighty dollar
-an arm and a leg
-an axe to grind
-an uphill battle
+arm and a leg
+axe to grind
 another day, another dollar
 are what you eat
 armed to the teeth
